@@ -10,8 +10,7 @@ export default function Hello() {
       fetch('http://localhost:4200/api/hello')
       .then((res: any) => res.json()))
       .then((data: any) => {
-        const pdata = JSON.parse(data);
-        setMessage(pdata.message);
+        setMessage(data.message);
       });
   }, []);
 
